@@ -1,0 +1,570 @@
+=== Module: combination::implements_or_extends_an_interface ===
+
+Class: Shape
+  Extends: Object
+  Implements: []
+  With: []
+
+Class: Circle
+  Extends: Shape
+  Implements: []
+  With: []
+
+Class: Triangle
+  Extends: Object
+  Implements: [Shape]
+  With: []
+
+
+=== Module: combination::implements_or_extends_chain::extends_extends ===
+
+Class: Class3
+  Extends: Object
+  Implements: []
+  With: []
+
+Class: Class2
+  Extends: Class3
+  Implements: []
+  With: []
+
+Class: Class1
+  Extends: Class2
+  Implements: []
+  With: []
+
+
+=== Module: combination::implements_or_extends_chain::extends_implements ===
+
+Class: Class3
+  Extends: Object
+  Implements: []
+  With: []
+
+Class: Class2
+  Extends: Object
+  Implements: [Class3]
+  With: []
+
+Class: Class1
+  Extends: Class2
+  Implements: []
+  With: []
+
+
+=== Module: combination::implements_or_extends_chain::implements_extends ===
+
+Class: Class3
+  Extends: Object
+  Implements: []
+  With: []
+
+Class: Class2
+  Extends: Class3
+  Implements: []
+  With: []
+
+Class: Class1
+  Extends: Object
+  Implements: [Class2]
+  With: []
+
+
+=== Module: combination::implements_or_extends_chain::implements_implements ===
+
+Class: Class3
+  Extends: Object
+  Implements: []
+  With: []
+
+Class: Class2
+  Extends: Object
+  Implements: [Class3]
+  With: []
+
+Class: Class1
+  Extends: Object
+  Implements: [Class2]
+  With: []
+
+
+=== Module: combination::inheritance_and_interface ===
+
+Class: Play
+  Extends: Object
+  Implements: []
+  With: []
+
+Class: Sleep
+  Extends: Object
+  Implements: []
+  With: []
+
+Class: Animal
+  Extends: Object
+  Implements: []
+  With: []
+
+Class: Dog
+  Extends: Animal
+  Implements: [Play, Sleep]
+  With: []
+
+
+=== Module: ctor ===
+
+Class: A
+  Extends: Object
+  Implements: []
+  With: []
+
+Class: B
+  Extends: A
+  Implements: []
+  With: []
+
+
+=== Module: function_helper ===
+
+Class: TestSuper
+  Extends: Object
+  Implements: []
+  With: []
+
+Class: Test
+  Extends: TestSuper
+  Implements: []
+  With: []
+
+
+=== Module: get_set::binary_tree ===
+
+Class: Node
+  Extends: Object
+  Implements: []
+  With: []
+
+Class: Tree
+  Extends: Object
+  Implements: []
+  With: []
+
+
+=== Module: get_set::modifiers ===
+
+Class: Foo
+  Extends: Object
+  Implements: []
+  With: []
+
+Class: Modifier
+  Extends: Object
+  Implements: []
+  With: []
+
+
+=== Module: get_set::modifiers_optional ===
+
+Class: Foo
+  Extends: Object
+  Implements: []
+  With: []
+
+Class: Modifier
+  Extends: Object
+  Implements: []
+  With: []
+
+
+=== Module: inheritance::diamond_inheritance ===
+
+Mixin: ChangeNotifier
+  HostClasses: [Object]
+
+Mixin Instance: Object_ChangeNotifier
+  Extends: Object
+  Implements: [Listenable]
+
+Class: Listenable
+  Extends: Object
+  Implements: []
+  With: []
+
+Class: PipelineManifold
+  Extends: Object
+  Implements: [Listenable]
+  With: []
+
+Class: BindingPipelineManifold
+  Extends: Object_ChangeNotifier
+  Implements: [PipelineManifold]
+  With: [ChangeNotifier]
+
+
+=== Module: inheritance::inheritance_chain ===
+
+Class: Alice
+  Extends: Object
+  Implements: []
+  With: []
+
+Class: Bob
+  Extends: Alice
+  Implements: []
+  With: []
+
+Class: Carol
+  Extends: Bob
+  Implements: []
+  With: []
+
+Class: Dave
+  Extends: Carol
+  Implements: []
+  With: []
+
+
+=== Module: inheritance::multiple_classes_casting ===
+
+Class: Alice
+  Extends: Object
+  Implements: []
+  With: []
+
+Class: Bob
+  Extends: Alice
+  Implements: []
+  With: []
+
+Class: Carol
+  Extends: Bob
+  Implements: []
+  With: []
+
+
+=== Module: inheritance::override_methods ===
+
+Class: Shape
+  Extends: Object
+  Implements: []
+  With: []
+
+Class: Circle
+  Extends: Shape
+  Implements: []
+  With: []
+
+
+=== Module: inheritance::two_classes_casting ===
+
+Class: Animal
+  Extends: Object
+  Implements: []
+  With: []
+
+Class: Dog
+  Extends: Animal
+  Implements: []
+  With: []
+
+
+=== Module: interface::abstract_class ===
+
+Class: Bark
+  Extends: Object
+  Implements: []
+  With: []
+
+Class: Dog
+  Extends: Object
+  Implements: [Bark]
+  With: []
+
+
+=== Module: interface::multiple_interfaces ===
+
+Class: Eat
+  Extends: Object
+  Implements: []
+  With: []
+
+Class: Drink
+  Extends: Object
+  Implements: []
+  With: []
+
+Class: Sleep
+  Extends: Object
+  Implements: []
+  With: []
+
+Class: Cat
+  Extends: Object
+  Implements: [Eat, Drink, Sleep]
+  With: []
+
+
+=== Module: interface::multiple_interfaces_casting ===
+
+Class: Eat
+  Extends: Object
+  Implements: []
+  With: []
+
+Class: Drink
+  Extends: Object
+  Implements: []
+  With: []
+
+Class: Cat
+  Extends: Object
+  Implements: [Eat, Drink]
+  With: []
+
+
+=== Module: interface::override_method ===
+
+Class: Bark
+  Extends: Object
+  Implements: []
+  With: []
+
+Class: Dog
+  Extends: Object
+  Implements: [Bark]
+  With: []
+
+
+=== Module: interface::should_not_use_field_in_casted_interface ===
+
+Class: Eat
+  Extends: Object
+  Implements: []
+  With: []
+
+Class: Cat
+  Extends: Object
+  Implements: [Eat]
+  With: []
+
+
+=== Module: interface::single_interface_casting ===
+
+Class: Eat
+  Extends: Object
+  Implements: []
+  With: []
+
+Class: Cat
+  Extends: Object
+  Implements: [Eat]
+  With: []
+
+
+=== Module: mixin::get_set_alignment ===
+
+Mixin: M
+  HostClasses: [A]
+
+Mixin Instance: A_M
+  Extends: A
+  Implements: []
+
+Class: A
+  Extends: Object
+  Implements: []
+  With: []
+
+Class: B
+  Extends: A_M
+  Implements: []
+  With: [M]
+
+
+=== Module: mixin::mixin_ctor ===
+
+Mixin: M1
+  HostClasses: [A, B_M2]
+
+Mixin: M2
+  HostClasses: [A_M1, B]
+
+Mixin Instance: A_M1
+  Extends: A
+  Implements: []
+
+Mixin Instance: B_M2_M1
+  Extends: B_M2
+  Implements: []
+
+Mixin Instance: A_M1_M2
+  Extends: A_M1
+  Implements: []
+
+Mixin Instance: B_M2
+  Extends: B
+  Implements: []
+
+Class: A
+  Extends: Object
+  Implements: []
+  With: []
+
+Class: B
+  Extends: Object
+  Implements: []
+  With: []
+
+Class: C
+  Extends: A_M1_M2
+  Implements: []
+  With: [M1, M2]
+
+Class: D
+  Extends: B_M2_M1
+  Implements: []
+  With: [M2, M1]
+
+
+=== Module: mixin::mixin_on_mixin ===
+
+Mixin: M1
+  HostClasses: [A]
+
+Mixin: M2
+  HostClasses: [A_M1]
+
+Mixin Instance: A_M1
+  Extends: A
+  Implements: [I]
+
+Mixin Instance: A_M1_M2
+  Extends: A_M1
+  Implements: []
+
+Class: A
+  Extends: Object
+  Implements: []
+  With: []
+
+Class: I
+  Extends: Object
+  Implements: []
+  With: []
+
+Class: B
+  Extends: A_M1_M2
+  Implements: []
+  With: [M1, M2]
+
+
+=== Module: mixin::multi_impls ===
+
+Mixin: M
+  HostClasses: [A]
+
+Mixin Instance: A_M
+  Extends: A
+  Implements: [I, J]
+
+Class: I
+  Extends: Object
+  Implements: []
+  With: []
+
+Class: J
+  Extends: Object
+  Implements: []
+  With: []
+
+Class: A
+  Extends: Object
+  Implements: []
+  With: []
+
+Class: B
+  Extends: A_M
+  Implements: []
+  With: [M]
+
+
+=== Module: mixin::multi_ons ===
+
+Mixin: M
+  HostClasses: [B]
+
+Mixin Instance: B_M
+  Extends: B
+  Implements: []
+
+Class: A
+  Extends: Object
+  Implements: []
+  With: []
+
+Class: B
+  Extends: A
+  Implements: []
+  With: []
+
+Class: C
+  Extends: B_M
+  Implements: []
+  With: [M]
+
+
+=== Module: mixin::multi_withs ===
+
+Mixin: M1
+  HostClasses: [A]
+
+Mixin: M2
+  HostClasses: [A, A_M1]
+
+Mixin Instance: A_M1
+  Extends: A
+  Implements: []
+
+Mixin Instance: A_M2
+  Extends: A
+  Implements: []
+
+Mixin Instance: A_M1_M2
+  Extends: A_M1
+  Implements: []
+
+Class: A
+  Extends: Object
+  Implements: []
+  With: []
+
+Class: B
+  Extends: A_M1_M2
+  Implements: []
+  With: [M1, M2]
+
+
+=== Module: single::default_field_value ===
+
+Class: Animal
+  Extends: Object
+  Implements: []
+  With: []
+
+
+=== Module: single::multiple_parameters ===
+
+Class: Animal
+  Extends: Object
+  Implements: []
+  With: []
+
+
+=== Module: single::override_default_field_value ===
+
+Class: Animal
+  Extends: Object
+  Implements: []
+  With: []
+
+
